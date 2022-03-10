@@ -134,6 +134,8 @@ class App extends Component {
           if (operand === '' && opState === false && second === '') {
             if (value !== '0' && first !== '0') {
               first += value;
+            } else if (value === '0' && first !== '0' && first !== '-') {
+              first += value;
             }
           } else {
             if (operand !== '' && first !== '' && first !== '-' && opState === false) {
